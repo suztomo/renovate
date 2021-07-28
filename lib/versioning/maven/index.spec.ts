@@ -72,6 +72,8 @@ describe(getName(), () => {
     expect(compare('1', '1-sp')).toEqual(-1);
     expect(compare('1-foo2', '1-foo10')).toEqual(-1);
     expect(compare('1-m1', '1-milestone-2')).toEqual(-1);
+    expect(compare('2.0.0-M5', '2.0.0-M11')).toEqual(-1);
+    expect(compare('2.0.0-M5', '2.0.0')).toEqual(-1);
     expect(compare('1.foo', '1-foo')).toEqual(-1);
     expect(compare('1-foo', '1-1')).toEqual(-1);
     expect(compare('1-alpha.1', '1-beta.1')).toEqual(-1);
